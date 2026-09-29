@@ -1,22 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, Lora } from 'next/font/google';
 import './globals.css';
-
-const playfair = Playfair_Display({
-  subsets: ['latin', 'vietnamese'],
-  variable: '--font-heading',
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-});
-
-const lora = Lora({
-  subsets: ['latin', 'latin-ext', 'vietnamese'],
-  variable: '--font-lora',
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -98,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi" className={`${playfair.variable} ${lora.variable}`} suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning>
       <body className="font-body bg-parchment-100 text-ink dark:bg-[#0F141C] dark:text-[#E2E8F0] transition-colors duration-300">
         <Providers>
           <ProgressBar />

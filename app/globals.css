@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-heading: 'Times New Roman', Times, serif;
+    --font-lora: Georgia, 'Times New Roman', serif;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
